@@ -20,7 +20,7 @@ The main contributions of this repository are:
 - **Gaussian reference** (`Calculate_rG.py`): Reference computation of `r_G` on the original (non-approximated) Gaussian membership functions.
 - **Shared utilities** (`fuzzy_utils.py`): Lagrange interpolation, cubic spline fitting, and one-step Newton–Raphson intersection computation.
 - **Intersection reference** (`x_bar_reference.py`): High-accuracy Brent-based reference for validating the one-step Newton–Raphson intersection computation.
-- **Shape families** (`shape_family_*.py`): Implementations of the four LR shape families — linear, quadratic, cubic, and quintic.
+- **Shape families** (`run_shape_family_experiments.py`): Implementations of the four LR shape families — linear, quadratic, cubic, and quintic.
 - **Alternative ranking methods** (`Yager.py`, `Liou_Wang.py`): Implementations of Yager's level-set valuation functional and Liou-Wang's integral-value ranking method.
 
 ---

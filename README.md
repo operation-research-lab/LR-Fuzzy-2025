@@ -18,7 +18,7 @@ The main contributions of this repository are:
 - **Proposed method** (`Proposed_method.py`): Implementation of the Simpson-based closed-form formulas (Theorem 3) for comparing Gaussian fuzzy numbers represented in LR form.
 - **Reference method** (`Ghanbari_method.py`): Implementation of the integral-based reference method (Theorem 2).
 - **Gaussian reference** (`Calculate_rG.py`): Reference computation of `r_G` on the original (non-approximated) Gaussian membership functions.
-- **Shared utilities** (`fuzzy_utils.py`): Lagrange interpolation, cubic spline fitting, and one-step Newton–Raphson intersection computation.
+- **Shared utilities** (`fuzzy_utils.py`): Lagrange interpolation, cubic Lagrange interpolant, and one-step Newton–Raphson intersection computation.
 - **Intersection reference** (`x_bar_reference.py`): High-accuracy Brent-based reference for validating the one-step Newton–Raphson intersection computation.
 - **Shape families** (`run_shape_family_experiments.py`): Implementations of the four LR shape families — linear, quadratic, cubic, and quintic.
 - **Alternative ranking methods** (`Yager.py`, `Liou_Wang.py`): Implementations of Yager's level-set valuation functional and Liou-Wang's integral-value ranking method.
@@ -197,8 +197,7 @@ All scripts reproduce the numerical results reported in the paper:
 
 ---
 
-## 📝 Citation
-
+## 📝 preprint citation
 If you use this code in your research, please cite our paper:
 
 ```bibtex
@@ -206,8 +205,6 @@ If you use this code in your research, please cite our paper:
   title   = {An O(1) direct algorithm for comparing LR fuzzy numbers
              with fixed-form parametric shape functions},
   author  = {Rahdar, Sahar and Ghanbari, Reza and Ghorbani-Moghadam, Khatere},
-  journal = {[Journal Name]},
-  year    = {2025}
 }
 ```
 

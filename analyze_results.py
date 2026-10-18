@@ -71,7 +71,6 @@ def main():
     print(f"Third quartile (Q3):         {q3_rel:.10f}")
     print(f"95% confidence interval:     [{ci_lower_rel:.10f}, {ci_upper_rel:.10f}]")
 
-    # محاسبه و چاپ سه سطر آخر
     pct_1e4 = (valid_rel < 1e-4).mean() * 100
     pct_1e3 = (valid_rel < 1e-3).mean() * 100
     pct_1e2 = (valid_rel < 1e-2).mean() * 100

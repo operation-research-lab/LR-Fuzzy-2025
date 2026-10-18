@@ -74,11 +74,21 @@ def run_family_experiment(family_name, module, num_pairs=10000, seed=12):
     rel_error = np.zeros_like(abs_error)
     rel_error[valid_mask] = abs_error[valid_mask] / np.abs(R_ghanbari[valid_mask])
 
+    sign_ghanbari = np.sign(R_ghanbari)
+    sign_simpson = np.sign(R_simpson)
+    sign_agreement = (sign_ghanbari == sign_simpson)
+    agreement_rate = np.mean(sign_agreement) * 100
+
+    reversals = np.sum(~sign_agreement)
+    # ========================================================
+
     return {
         'Shape_Family': family_name,
         'Max_Relative_Error': np.max(rel_error),
         'Mean_Relative_Error': np.mean(rel_error),
         'Max_Absolute_Error': np.max(abs_error),
+        'Ordering_Agreement_Pct': agreement_rate,  # <--- اضافه شد
+        'Sign_Reversals': reversals,  # <--- اضافه شد
         'Time_Proposed': time_s,
         'Time_Reference': time_g
     }
